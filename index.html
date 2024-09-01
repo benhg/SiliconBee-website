@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SiliconBee.ai - AI Processors for the Future</title>
     <style>
+        /* Define your color variables */
         :root {
             --light-bg: #f4f4f9;
             --light-text: #333;
@@ -159,7 +160,7 @@
             margin-right: 10px;
         }
 
-        /* Dark Mode */
+        /* Dark Mode Styles */
         body.dark-mode {
             background-color: var(--dark-bg);
             color: var(--dark-text);
@@ -193,7 +194,7 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="SiliconBee.ai Logo" class="logo">
+        <img src="static/logo_small.png" alt="SiliconBee.ai Logo" class="logo">
         <div class="theme-toggle">
             <input type="checkbox" id="theme-switch">
             <label for="theme-switch">Dark Mode</label>
@@ -204,6 +205,10 @@
             <a href="#contact">Contact Us</a>
         </nav>
     </header>
+
+    <section>
+        <img src="static/logo.png" alt="SiliconBee.ai Logo" class="logo">
+    </section>
 
     <section class="hero">
         <h1>Next-Generation AI Processors</h1>
@@ -253,6 +258,19 @@
     </footer>
 
     <script>
+        // Function to apply dark mode based on user preference
+        function applyThemeBasedOnPreference() {
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            if (prefersDarkScheme) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-switch').checked = true;
+            }
+        }
+
+        // Initialize theme based on preference
+        applyThemeBasedOnPreference();
+
+        // Handle theme switch toggle
         const toggleSwitch = document.getElementById('theme-switch');
         toggleSwitch.addEventListener('change', () => {
             document.body.classList.toggle('dark-mode', toggleSwitch.checked);
