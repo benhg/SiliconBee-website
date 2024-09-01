@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiliconBee.ai - AI Processors for the Future</title>
+    <style>
+        :root {
+            --light-bg: #f4f4f9;
+            --light-text: #333;
+            --dark-bg: #121212;
+            --dark-text: #e0e0e0;
+            --primary-color: #fab600;
+            --header-footer-bg: #000;
+            --header-footer-text: #fab600;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--light-text);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: var(--header-footer-bg);
+            color: var(--header-footer-text);
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-height: 50px; /* Adjust based on your logo size */
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--header-footer-text);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background-color: #d9a500;
+        }
+
+        footer {
+            background-color: var(--header-footer-bg);
+            color: var(--header-footer-text);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            color: var(--header-footer-text);
+        }
+
+        .theme-toggle input {
+            margin-right: 10px;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        body.dark-mode header {
+            background-color: var(--header-footer-bg);
+            color: var(--dark-text);
+        }
+
+        body.dark-mode .hero {
+            color: var(--primary-color);
+        }
+
+        body.dark-mode .product {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+        }
+
+        body.dark-mode .contact-form {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+        }
+
+        body.dark-mode footer {
+            background-color: var(--header-footer-bg);
+            color: var(--dark-text);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="SiliconBee.ai Logo" class="logo">
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch">
+            <label for="theme-switch">Dark Mode</label>
+        </div>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#products">Our Products</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Next-Generation AI Processors</h1>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About SiliconBee.ai</h2>
+        <p>SiliconBee.ai is revolutionizing AI processing with cutting-edge hardware designed for the next wave of artificial intelligence. Our processors are built for speed, efficiency, and unmatched performance, driving innovation in AI applications across industries.</p>
+    </section>
+
+    <section id="products" class="section">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <h3>AI Processor X1</h3>
+                <p>Designed for deep learning and neural network applications, the X1 offers unprecedented performance and power efficiency.</p>
+            </div>
+            <div class="product">
+                <h3>AI Processor Z2</h3>
+                <p>Optimized for high-speed data processing and analytics, the Z2 is the perfect choice for enterprise AI solutions.</p>
+            </div>
+            <div class="product">
+                <h3>AI Processor N3</h3>
+                <p>The N3 is built for edge AI, delivering top-tier performance in a compact, power-efficient package.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SiliconBee.ai. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggleSwitch = document.getElementById('theme-switch');
+        toggleSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode', toggleSwitch.checked);
+        });
+    </script>
+
+</body>
+</html>
