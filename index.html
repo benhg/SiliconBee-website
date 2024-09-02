@@ -174,7 +174,6 @@
             text-align: center;
             margin: 0 auto;
             display: block;
-
         }
 
         body.dark-mode header {
@@ -205,7 +204,8 @@
 <body>
 
     <header>
-        <img src="static/logo_small.png" alt="SiliconBee.ai Logo" class="logo">
+        <!-- Logo for dark mode initially -->
+        <img src="static/logo_dark_small.png" alt="SiliconBee.ai Logo" class="logo" id="site-logo">
         <div class="theme-toggle">
             <input type="checkbox" id="theme-switch">
             <label for="theme-switch">Dark Mode</label>
@@ -218,7 +218,7 @@
     </header>
 
     <section>
-        <img src="static/logo.png" class="logo-large" alt="SiliconBee.ai Logo">
+        <img src="static/logo_dark.png" class="logo-large" alt="SiliconBee.ai Large Logo" id="site-logo-large">
     </section>
 
     <section class="hero">
@@ -237,7 +237,6 @@
                 <h3>Come Back Later :)</h3>
                 <p>We are working on some exciting hardware and software products. Please stay tuned for more.</p>
             </div>
-
         </div>
     </section>
 
@@ -265,9 +264,17 @@
         // Function to apply dark mode based on user preference
         function applyThemeBasedOnPreference() {
             const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            const logo = document.getElementById('site-logo');
+            const largeLogo = document.getElementById('site-logo-large');
+
             if (prefersDarkScheme) {
                 document.body.classList.add('dark-mode');
                 document.getElementById('theme-switch').checked = true;
+                logo.src = 'static/logo_dark.png';
+                largeLogo.src = 'static/logo_dark.png';
+            } else {
+                logo.src = 'static/logo_light.png';
+                largeLogo.src = 'static/logo_light.png';
             }
         }
 
@@ -278,6 +285,17 @@
         const toggleSwitch = document.getElementById('theme-switch');
         toggleSwitch.addEventListener('change', () => {
             document.body.classList.toggle('dark-mode', toggleSwitch.checked);
+            
+            const logo = document.getElementById('site-logo');
+            const largeLogo = document.getElementById('site-logo-large');
+            
+            if (toggleSwitch.checked) {
+                logo.src = 'static/logo_dark.png';
+                largeLogo.src = 'static/logo_dark.png';
+            } else {
+                logo.src = 'static/logo_dark_small.png';
+                largeLogo.src = 'static/logo_light.png';
+            }
         });
     </script>
 
