@@ -299,5 +299,53 @@
         });
     </script>
 
+    <script>
+    // Function to validate the email format using a regular expression
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Function to handle form submission
+    function handleFormSubmit(event) {
+        event.preventDefault();  // Prevent the default form submission
+
+        // Get the form field values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate the form fields
+        if (name === '') {
+            alert('Please enter your name.');
+            return;
+        }
+
+        if (email === '') {
+            alert('Please enter your email.');
+            return;
+        } else if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        if (message === '') {
+            alert('Please enter your message.');
+            return;
+        }
+
+        // If validation passes, display a success message
+        alert('Thank you for contacting us, ' + name + '! Your message has been sent successfully.');
+        
+        // Optionally, clear the form fields
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+    }
+
+    // Attach the submit event listener to the form
+    document.querySelector('.contact-form').addEventListener('submit', handleFormSubmit);
+    </script>
+
 </body>
 </html>
