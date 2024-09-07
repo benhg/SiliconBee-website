@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Favicon Links -->
-        <link rel="icon" href="static/favicons/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="static/favicons/favicon-32x32.png" type="image/png">
-        <title>SiliconBee - AI Processors for the Future</title>
-        <style>
-            /* Define your color variables */
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon Links -->
+    <link rel="icon" href="static/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/favicons/favicon-32x32.png" type="image/png">
+    <title>SiliconBee - AI Processors for the Future</title>
+    <style>
+        /* Define your color variables */
             :root {
             --light-bg: #f4f4f9;
             --light-text: #333;
@@ -56,6 +57,7 @@
             color: var(--primary-color);
             text-align: center;
             }
+
             .hero h1 {
             font-size: 48px;
             margin: 0;
@@ -214,59 +216,67 @@
             .switch:checked + .switch-label::after {
             transform: translateX(24px);
             }
-        </style>
-    </head>
-    <body>
-        <header>
-            <!-- Logo for dark mode initially -->
-            <img src="static/logo_only.png" alt="SiliconBee.ai Logo" class="logo" id="site-logo">
-            <div class="theme-toggle">
-                <span class="switch-text">Dark Mode</span>
-                <input type="checkbox" id="theme-switch" class="switch">
-                <label for="theme-switch" class="switch-label"></label>
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Logo for dark mode initially -->
+        <img src="static/logo_only.png" alt="SiliconBee.ai Logo" class="logo" id="site-logo">
+        <div class="theme-toggle">
+            <span class="switch-text">Dark Mode</span>
+            <input type="checkbox" id="theme-switch" class="switch">
+            <label for="theme-switch" class="switch-label"></label>
+        </div>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#products">Our Products</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+    <section>
+        <img src="static/logo_only.png" class="logo-large" alt="SiliconBee.ai Large Logo" id="site-logo-large">
+    </section>
+    <section class="hero">
+        <h1>Next-Generation AI Processors</h1>
+    </section>
+    <section id="about" class="section">
+        <h2>About SiliconBee</h2>
+        <p>SiliconBee is revolutionizing AI processing with cutting-edge hardware designed for the next wave of artificial intelligence. Our processors are built for speed, efficiency, and unmatched performance, driving innovation in AI applications across
+            industries.</p>
+    </section>
+    <section id="products" class="section">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Coming Soon</h3>
+                <p>We are working on some exciting hardware and software products. Please stay tuned for more.</p>
             </div>
-            <nav>
-                <a href="#about">About Us</a>
-                <a href="#products">Our Products</a>
-                <a href="#contact">Contact Us</a>
-            </nav>
-        </header>
-        <section>
-            <img src="static/logo_only.png" class="logo-large" alt="SiliconBee.ai Large Logo" id="site-logo-large">
-        </section>
-        <section class="hero">
-            <h1>Next-Generation AI Processors</h1>
-        </section>
-        <section id="about" class="section">
-            <h2>About SiliconBee</h2>
-            <p>SiliconBee is revolutionizing AI processing with cutting-edge hardware designed for the next wave of artificial intelligence. Our processors are built for speed, efficiency, and unmatched performance, driving innovation in AI applications across industries.</p>
-        </section>
-        <section id="products" class="section">
-            <h2>Our Products</h2>
-            <div class="products">
-                <div class="product">
-                    <h3>Coming Soon</h3>
-                    <p>We are working on some exciting hardware and software products. Please stay tuned for more.</p>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <form class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-        <footer>
-            <p>&copy; 2024 SiliconBee, Inc. All rights reserved.</p>
-        </footer>
-        <script>
-            // Initialize dark mode based on user preference
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="https://formspree.io/f/xnnarlkp" method="POST">
+            <label>
+                Your Name:
+                <input type="name" name="name">
+            </label>
+            <label>
+                Your email:
+                <input type="email" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 SiliconBee, Inc. All rights reserved.</p>
+    </footer>
+    <script>
+        // Initialize dark mode based on user preference
             function applyThemeBasedOnPreference() {
                 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
                 const toggleSwitch = document.getElementById('theme-switch');
@@ -307,13 +317,41 @@
                 applyThemeBasedOnPreference();
                 toggleSwitch.addEventListener('change', handleThemeSwitch);
             });
-        </script>
-        <script>
-            // Function to validate the email format using a regular expression
+    </script>
+    <script>
+        // Function to validate the email format using a regular expression
             function isValidEmail(email) {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return emailRegex.test(email);
             }
+
+            function sendMail(name, email, subject, message) {
+                  const myHeaders = new Headers();
+                  myHeaders.append("Content-Type", "application/json");
+                 
+
+                  const data = JSON.stringify({
+                    "Messages": [{
+                      "From": {"Email": "info@siliconbee.ai", "Name": "Info"},
+                      "To": [{"Email": "info@siliconbee.ai", "Name": "Info"}],
+                      "Subject": subject + " From " + email,
+                      "TextPart": message + "\n" + name+ "<"+email + ">"
+                    }]
+                  });
+
+                  const requestOptions = {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: data,
+                  };
+
+                  fetch("https://api.mailjet.com/v3.1/send", requestOptions)
+                    .then(response => response.text())
+                    .then(result => console.log(result))
+                    .catch(error => console.log('error', error));
+
+            }
+
             
             // Function to handle form submission
             function handleFormSubmit(event) {
@@ -342,6 +380,7 @@
                     alert('Please enter your message.');
                     return;
                 }
+                sendMail(name, email, "Information Request: SiliconBee" ,message);
             
                 // If validation passes, display a success message
                 alert('Thank you for contacting us, ' + name + '! Your message has been sent successfully.');
@@ -353,7 +392,8 @@
             }
             
             // Attach the submit event listener to the form
-            document.querySelector('.contact-form').addEventListener('submit', handleFormSubmit);
-        </script>
-    </body>
+            // document.querySelector('.contact-form').addEventListener('submit', handleFormSubmit);
+    </script>
+</body>
+
 </html>
